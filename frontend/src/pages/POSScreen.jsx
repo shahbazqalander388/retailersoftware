@@ -374,9 +374,9 @@ export default function POSScreen() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-6.5rem)] gap-5">
+    <div className="flex flex-col xl:flex-row h-auto xl:h-[calc(100vh-6.5rem)] gap-5 pb-8 xl:pb-0">
       {/* LEFT COLUMN: Barcode Search & Cart Items Table */}
-      <div className="flex-1 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+      <div className="flex-1 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden min-h-[460px]">
         {/* Top Search & Barcode Bar */}
         <div className="p-4 border-b border-slate-800 bg-slate-900/90 flex items-center gap-3 relative">
           <div className="relative flex-1" ref={searchContainerRef}>
@@ -609,7 +609,7 @@ export default function POSScreen() {
       </div>
 
       {/* RIGHT COLUMN: Customer, Payment & Checkout Panel */}
-      <div className="w-96 flex-shrink-0 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+      <div className="w-full xl:w-96 flex-shrink-0 flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
         {/* Customer Selector Header */}
         <div className="p-4 border-b border-slate-800 bg-slate-850">
           <div className="flex items-center justify-between mb-2">

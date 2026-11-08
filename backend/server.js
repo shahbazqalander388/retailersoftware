@@ -43,11 +43,13 @@ app.use(async (req, res, next) => {
 });
 
 // Routes
+const authRoute = require('./routes/auth');
 const productsRoute = require('./routes/products');
 const posRoute = require('./routes/pos');
 const reportsRoute = require('./routes/reports');
 const accountsRoute = require('./routes/accounts');
 
+app.use('/api/auth', authRoute);
 app.use('/api/products', productsRoute);
 app.use('/api/pos', posRoute);
 app.use('/api/reports', reportsRoute);
